@@ -1,9 +1,20 @@
 public class Menukifome {
     public static void main(String[] args) throws Exception {
+        Comidas c1 = new Comidas ();
+        c1.setCafé_da_manha("Pão com Ovo");
+        c1.setAlmoço("Arroz, Feijão e carne");
+        c1.setSobremesa("sorvete");
+        c1.setLanche("Sanduiche");
+        c1.setJanta("Cuscuz");
+        c1.status();
+        System.out.println("");
+        System.out.println("");
+        //////////////////////////////
         Entregas pedido1 = new Entregas();
-        pedido1.setPedidos_recusados(true);
+        pedido1.setPedidos_pendentes(true);
+        pedido1.setPedidos_recusados(false);
         pedido1.setPedidos_entregados(false);
         pedido1.status_do_pedido();
-       
+        
     }
 }
