@@ -1,4 +1,5 @@
 public class Entregas {
+    private String localizacao_da_entrega;
     private boolean pedidos_pendentes;
     private boolean pedidos_a_caminho;
     private boolean pedidos_entregados;
@@ -7,10 +8,15 @@ public class Entregas {
 
 //////////////////////status do pedido///////////////////////////////////////////
     void status_do_pedido(){
+        System.out.println("Localização da entrega: "+ this.localizacao_da_entrega);
         System.out.println("O pedido está pendente? "+ this.pedidos_pendentes);
         System.out.println("O pedido está a caminho? "+ this.pedidos_a_caminho);
         System.out.println("O pedido já foi entregue? "+ this.pedidos_entregados);
         System.out.println("O pedido foi recusado? "+ this.pedidos_recusados);
+    }
+////////////////////status da localização da entrega/////////////
+    void localizaçâo_da_entrega(){
+        this.localizacao_da_entrega = ("rua grande N° 03");
     }
 ////////////////////status do pedido feito///////////////////////
     void pedido_feito(){
@@ -29,6 +35,13 @@ public class Entregas {
         this.pedidos_recusados = false;
     }
 ///////////////// getter e setter////////////////////////////
+////////////////localização do cliente//////////////////////
+    public String getLocalizacao_da_entrega(){
+        return this.localizacao_da_entrega;
+    }
+    public void setLocalizacao_da_entrega(String le){
+        this.localizacao_da_entrega = le;
+    }
 /////////////////pedidos pendentes///////////////////////////
     public boolean getPedidos_pendentes() {
         return this.pedidos_pendentes;

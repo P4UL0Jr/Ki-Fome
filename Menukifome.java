@@ -11,6 +11,7 @@ public class Menukifome {
         System.out.println("");
         //////////////////////////////
         Entregas pedido1 = new Entregas();
+        pedido1.setLocalizacao_da_entrega("Rua Grande N° 3");
         pedido1.setPedidos_pendentes(true);
         pedido1.setPedidos_recusados(false);
         pedido1.setPedidos_entregados(false);
