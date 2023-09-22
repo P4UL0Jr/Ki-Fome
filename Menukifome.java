@@ -7,7 +7,7 @@ public class Menukifome {
         c1.setLanche("Sanduiche");
         c1.setJanta("Cuscuz");
         c1.status();
-        System.out.println("");
+        System.out.println("------------------------------------");
         System.out.println("");
         //////////////////////////////
         Entregas pedido1 = new Entregas();
@@ -16,6 +16,17 @@ public class Menukifome {
         pedido1.setPedidos_recusados(false);
         pedido1.setPedidos_entregados(false);
         pedido1.status_do_pedido();
+        System.out.println("-------------------------------------");
+        System.out.println("");
+        ////////////////////////////////////////
+        Restaurantes restaurante1 = new Restaurantes();
+        //restaurante1.setCnpj(1234.1234);
+        restaurante1.setEmail_do_restaurantes("CKhamburgueria@gmai.com");
+        restaurante1.setEndereço("rua do forró");
+        restaurante1.setNome_do_empresário("halisson");
+        restaurante1.setNome_do_resteurantes("CK Hamburgueria");
+        restaurante1.status();
+
         
     }
 }
