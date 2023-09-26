@@ -44,4 +44,5 @@ public class Restaurantes {
         System.out.println("nome do resteurantes: " + this.nome_do_resteurantes);
         System.out.println("nome do empresário: " + this.nome_do_empresário);
     }
+    
 }

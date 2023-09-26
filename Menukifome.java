@@ -26,7 +26,14 @@ public class Menukifome {
         restaurante1.setNome_do_empresário("halisson");
         restaurante1.setNome_do_resteurantes("CK Hamburgueria");
         restaurante1.status();
-
+        ///////////////////////////////////
+        Entregadores entregador1 = new Entregadores();
+        entregador1.setEmail_do_entregador("emaildoentregador");
+        entregador1.setNome_do_entregador("nome do entregador");
+        entregador1.setPagamento(true);
+        entregador1.setPlaca_do_entregador("ABC-1234");
+        entregador1.setVeículo_do_entregador("125 CG");
+        entregador1.Status_do_entregador();
         
     }
 }
