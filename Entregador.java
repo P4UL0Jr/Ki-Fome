@@ -1,4 +1,4 @@
-public class Entregadores {
+public class Entregador {
     private String Email_do_entregador;
     private String Nome_do_entregador;
     private String Veículo_do_entregador;

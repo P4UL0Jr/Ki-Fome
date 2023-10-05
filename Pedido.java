@@ -1,4 +1,4 @@
-public class Entregas {
+public class Pedido {
     private String localizacao_da_entrega;
     private boolean pedidos_pendentes;
     private boolean pedidos_a_caminho;

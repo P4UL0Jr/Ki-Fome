@@ -1,4 +1,4 @@
-public class Comidas {
+public class Comida {
     public String café_da_manha;
     public String almoço;
     public String sobremesa;
@@ -41,7 +41,7 @@ public class Comidas {
        this.janta = ja;
     }
     
-    public void status() {
+    public void status_das_comidas() {
        System.out.println("TEMOS AS SEGUINTES REFEIÇÕES");
        System.out.println("Café da manha: " + this.café_da_manha);
        System.out.println("Almoço: " + this.almoço);
