@@ -21,7 +21,7 @@ public class Menukifome {
                     Usuario1.Cadastro_de_cliente();
                     cadastro = true;
                     break;
-                case 2:
+                case 3:
                     Usuario Usuario2 = new Usuario();
                     Usuario2.cadastrar_restaurante();
                     cadastro = true;

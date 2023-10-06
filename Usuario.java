@@ -111,53 +111,54 @@ public class Usuario  {
             }
 
         }
-        Comida cardapio1 = new Comida();
-        System.out.println("Quais comidas você quer adicionar em seu cardapio? ");
-        System.out.println("[1]café da manha, [2]almoço,[3]sobremesa, [4]lanche, [5]janta e [6]para encerrar"); 
-        int comidas_no_cardapio;
-        comidas_no_cardapio = input.nextInt();
-        while (comidas_no_cardapio != 6) {
-
-            switch(comidas_no_cardapio ){
-                case 1 :
-                    String cafe_da_manha;
-                    System.out.println("Digite o café da manhã que será adicionado ");
-                    cafe_da_manha = input.nextLine();
-                    cardapio1.setCafé_da_manha(cafe_da_manha);
-                    break;
-                case 2:
-                    String almoco;
-                    System.out.println("Digite o almoço que será adicionado ");
-                    almoco = input.nextLine();
-                    cardapio1.setAlmoço(almoco);
-                    break;
-                case 3:
-                    String sobremesa;
-                    System.out.println("Digite a sobremesa que será adicionada ");
-                    sobremesa = input.nextLine();
-                    cardapio1.setSobremesa(sobremesa);
-                    break;
-                case 4:
-                    String lanche;
-                    System.out.println("Digite o lanche que será adicionado ");
-                    lanche = input.nextLine();
-                    cardapio1.setLanche(lanche);
-                    break;
-                case 5:
-                    String janta;
-                    System.out.println("Digite a janta que sera adicionada ");
-                    janta = input.nextLine();
-                    cardapio1.setJanta(janta);
-                    break;
-            }    
+        int laco_de_repeticao;
+        laco_de_repeticao = 7;
+        while (laco_de_repeticao != 2 ) {
+            System.out.println("Para adicionar comida no cardapio");
+            System.out.println("Digite [1]");
+            System.out.println("Para ver o seu cardapio");
+            System.out.println("Digite [2]");
+            int adicionar_ou_ver_cardp;
+            Comida cardapio1 = new Comida();
+            adicionar_ou_ver_cardp = input.nextInt();
             
+            
+            
+            if(adicionar_ou_ver_cardp == 1){
+                
+                System.out.println("Quais comidas você quer adicionar em seu cardapio? ");
+                System.out.println("[1]café da manha, [2]almoço,[3]sobremesa, [4]lanche, [5]janta e [6]para encerrar"); 
+                int comidas_no_cardapio;
+                comidas_no_cardapio = input.nextInt();
+                while (comidas_no_cardapio != 6) {
 
-            System.out.println("[1]café da manha, [2]almoço,[3]sobremesa, [4]lanche, [5]janta e [6]para encerrar"); 
-            comidas_no_cardapio = input.nextInt();
+                    switch(comidas_no_cardapio ){
+                        case 1 :
+                            cardapio1.adicionar_cafe_da_manha();
+                            break;
+                        case 2:
+                            cardapio1.adicionar_almoco();
+                            break;
+                        case 3:
+                            cardapio1.adicionar_sobremesa();
+                            break;
+                        case 4:
+                            cardapio1.adicionar_lanche();
+                            break;
+                        case 5:
+                            cardapio1.adicionar_janta();
+                            break;
+                    }    
+                    
+
+                    System.out.println("[1]café da manha, [2]almoço,[3]sobremesa, [4]lanche, [5]janta e [6]para encerrar"); 
+                    comidas_no_cardapio = input.nextInt();
+                }
+                System.out.println();
+            } else if (adicionar_ou_ver_cardp == 2){
+                cardapio1.status_do_cardapio();
+            }
         }
-        System.out.println();
-
-
     }
 
     
