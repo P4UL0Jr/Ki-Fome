@@ -1,4 +1,5 @@
 public class Pedido {
+    private Comida tipos_comida;
     private String localizacao_da_entrega;
     private boolean pedidos_pendentes;
     private boolean pedidos_a_caminho;
@@ -16,7 +17,7 @@ public class Pedido {
     }
 ////////////////////status da localização da entrega/////////////
     void localizaçâo_da_entrega(){
-        this.localizacao_da_entrega = ("rua grande N° 03");
+        this.localizacao_da_entrega = ("");
     }
 ////////////////////status do pedido feito///////////////////////
     void pedido_feito(){
@@ -35,6 +36,7 @@ public class Pedido {
         this.pedidos_recusados = false;
     }
 ///////////////// getter e setter////////////////////////////
+
 ////////////////localização do cliente//////////////////////
     public String getLocalizacao_da_entrega(){
         return this.localizacao_da_entrega;
@@ -69,5 +71,11 @@ public class Pedido {
     }
     public void setPedidos_recusados(boolean pr) {
         this.pedidos_recusados = pr;
+    }
+    public Comida getTipos_comida() {
+        return tipos_comida;
+    }
+    public void setTipos_comida(Comida tipos_comida) {
+        this.tipos_comida = tipos_comida;
     } 
 }
