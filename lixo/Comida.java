@@ -1,7 +1,11 @@
+package lixo;
 import java.util.Scanner;
+
+import servicos.EmpresarioServico;
+
 import java.util.ArrayList;
 
-public class Comida extends Empresario {
+public class Comida extends EmpresarioServico {
     Scanner input_da_comida = new Scanner(System.in);
     ArrayList <Bebida> bebidalist = new ArrayList<>();
     ArrayList <Prato> Cafe_da_manhalist = new ArrayList<>();
@@ -73,12 +77,34 @@ public class Comida extends Empresario {
                     }
                     break;
                 case "3":
-                    //encontrando_valor();
-
-
                     
-                    excluindo_elemento();
-                    break;
+                    System.out.println("DE QUAL PARTE DO CARDAPIO VOCE QUER EXCLUIR");
+                    System.out.println("[1]Cafe da manha [2]Almoco  [3]Sobremesa  [4]Lanche  [5]Janta  [6]Bebida ");
+                    String caseexcluir = input_da_comida.nextLine();
+                    switch (caseexcluir) {
+                        case "1":
+                            excluindo_cafedamanha();
+                            break;
+                        case"2":
+                            excluindo_almoco();
+                            break;
+                        case "3":
+                            excluindo_sobremesa();
+                            break;
+                        case "4": 
+                            excluindo_lanche();
+                            break;
+                        case "5": 
+                            excluindo_janta();
+                            break;
+                        case "6": 
+                            excluindo_bebida();
+                            break;
+
+
+                    }
+                    
+                break;
                 case "4":
                     cadastro_de_repeticao = variavel;
                     break;
@@ -93,44 +119,49 @@ public class Comida extends Empresario {
 
 
     private void adcionando_cafedamanha(){
-        System.out.println("Digite o valor do Cafe Da Manhã que será adiiconado");
-        String vcdm = input_da_comida.nextLine();
+        
         System.out.println("Digite o Cafe Da Manhã que será adicionado");
         String cdm = input_da_comida.nextLine();
+        System.out.println("Digite o valor do Cafe Da Manhã que será adiiconado");
+        String vcdm = input_da_comida.nextLine();
         Cafe_da_manhalist.add(new Prato(cdm, vcdm ));
         System.out.println("CAFÉ DA MANHA ADICIONADO COM SUCESSO!!!");
 
     }
     private  void adicionando_almoco(){
-        System.out.println("Digite o valor do Almoço que será adicioando");
-        String adicionando_valor_almoco = input_da_comida.nextLine();
+        
         System.out.println("Digite o Almoço que será adicionado");
         String adcionando_almoco = input_da_comida.nextLine();
+        System.out.println("Digite o valor do Almoço que será adicioando");
+        String adicionando_valor_almoco = input_da_comida.nextLine();
         Almocolist.add(new Prato(adcionando_almoco, adicionando_valor_almoco));
         System.out.println("ALMOÇO ADICIONADO COM SUCESSO!!!");
 
     }
     private void adicionando_sobremesa(){
-        System.out.println("Digite o valor da Sobremesa que será adicionada");
-        String adicionando_valor_sonbremesa = input_da_comida.nextLine();
+        
         System.out.println("Digite a Sobremesa que será adicionada");
         String adicionanddo_sobremesa = input_da_comida.nextLine();
+        System.out.println("Digite o valor da Sobremesa que será adicionada");
+        String adicionando_valor_sonbremesa = input_da_comida.nextLine();
         Sobremesalist.add(new Prato(adicionanddo_sobremesa, adicionando_valor_sonbremesa));
         System.out.println("SOBREMESA ADICIONADA COM SUCESSO!!!");
     }
     private void adicionando_lanche(){
-        System.out.println("Digite o valor do Lanche que será adicionado");
-        String adicionando_valor_lanche = input_da_comida.nextLine();
+        
         System.out.println("Digite o Lanche que será adicionado");
         String adicionando_lanche = input_da_comida.nextLine();
+        System.out.println("Digite o valor do Lanche que será adicionado");
+        String adicionando_valor_lanche = input_da_comida.nextLine();
         Lanchelist.add(new Prato(adicionando_lanche, adicionando_valor_lanche));
         System.out.println("LANCHE ADICIONADO COM SUCESSO!!!");
     }
     private void adicionando_janta(){
-        System.out.println("Digite o valor do Lanche que será adicionado");
-        String adicionando_valor_janta = input_da_comida.nextLine();
+        
         System.out.println("Digite a Janta que será adicionada");
         String adicionando_janta = input_da_comida.nextLine();
+        System.out.println("Digite o valor do Lanche que será adicionado");
+        String adicionando_valor_janta = input_da_comida.nextLine();
         Jantalist.add(new Prato(adicionando_janta, adicionando_valor_janta));
         System.out.println("JANTA ADICIONADA COM SUCESSO!!!");
     }
@@ -138,34 +169,34 @@ public class Comida extends Empresario {
     public void mostrando_cafedamanha(){
         System.out.println("MOSTRANDO CAFE DA MANHA");
         for (int i = 0; i< Cafe_da_manhalist.size(); i++){
-            System.out.println(i+1 + "º-"+Cafe_da_manhalist.get(i).getNome_do_prato()+ "--- R$:"+ Cafe_da_manhalist.get(i).getValor());
+            System.out.println(i+1 + "º__"+Cafe_da_manhalist.get(i).getNome_do_prato()+ "__R$:"+ Cafe_da_manhalist.get(i).getValor());
         }
     }
 
     public void mostrando_almoco(){
         System.out.println("MOSTRANDO ALMOÇO");
         for (int i = 0; i< Almocolist.size(); i++){
-            System.out.println(i+1 + "º-"+Almocolist.get(i).getNome_do_prato()+ "--- R$:"+ Almocolist.get(i).getValor());
+            System.out.println(i+1 + "º__"+Almocolist.get(i).getNome_do_prato()+ "__R$:"+ Almocolist.get(i).getValor());
         }
     }
     public void mostrando_sobremesa() {
         System.out.println("MOSTRANDO SOBREMESA");
         for (int i = 0; i < Sobremesalist.size(); i++) {
-            System.out.println(i+1 + "º-"+Sobremesalist.get(i).getNome_do_prato()+ "--- R$:"+ Sobremesalist.get(i).getValor());
+            System.out.println(i+1 + "º__"+Sobremesalist.get(i).getNome_do_prato()+ "__R$:"+ Sobremesalist.get(i).getValor());
 
         }
     }
     public void mostrando_lanche(){
         System.out.println("MOSTRANDO LANCHE");
         for (int i = 0; i< Lanchelist.size(); i++){
-            System.out.println(i+1 + "º-"+Lanchelist.get(i).getNome_do_prato()+ "--- R$:"+ Lanchelist.get(i).getValor());
+            System.out.println(i+1 + "º__"+Lanchelist.get(i).getNome_do_prato()+ "__R$:"+ Lanchelist.get(i).getValor());
         }
     }
 
     public void mostrando_janta(){
         System.out.println("MOSTRANDO JANTA");
         for (int i =0; i < Jantalist.size(); i++){
-            System.out.println(i+1 + "º-"+Jantalist.get(i).getNome_do_prato()+ "--- R$:"+ Jantalist.get(i).getValor());
+            System.out.println(i+1 + "º__"+Jantalist.get(i).getNome_do_prato()+ "__R$:"+ Jantalist.get(i).getValor());
         }
     }
  
@@ -173,7 +204,7 @@ public class Comida extends Empresario {
     public void mostrando_bebida(){
         System.out.println("MOSTRANDO BBEBIDA");
         for (int i =0; i < bebidalist.size(); i++){
-            System.out.println(i+1 + "º-"+bebidalist.get(i).getNome()+ "= R$:"+ bebidalist.get(i).getValor()+ " =ml "+bebidalist.get(i).getMl());
+            System.out.println(i+1 + "º__"+bebidalist.get(i).getNome()+ "__R$:"+ bebidalist.get(i).getValor()+ "__ml "+bebidalist.get(i).getMl());
 
         }
     }
@@ -188,90 +219,91 @@ public class Comida extends Empresario {
     }
 
 
-    public void excluindo_elemento(){
-        
-            
-        
-        
-            
-        
+    protected void excluindo_cafedamanha(){
         System.out.println("QUAL COMIDA DESEJA EXCLUIR DO CARDAPIO?");
         String excluindo_comida = input_da_comida.nextLine();
-        System.out.println("DE QUAL PARTE DO CARDAPIO VOCE QUER EXCLUIR");
-        System.out.println("[1]Bebida [2]Cafe da manha [3]Almoco [4]Sobremesa [5]Lanche [6]Janta ");
-        String caseexcluir = input_da_comida.nextLine();
-        
-        switch (caseexcluir) {
-            case "1":
-                for (Bebida b : bebidalist) {
-            
-                    if(b.getNome().equalsIgnoreCase(excluindo_comida)){
-                        System.out.println("Econtrado na -BEBIDA-");
-                        bebidalist.remove(b);
-                        System.out.println(b.getNome()+" Excluido com sucesso");
-                    }else{
-                    System.out.println("NÃO FOI ENCONTRADO EM BEBIDA");
-                    }
-            
-                }
-            break;
+        for (Prato p : Cafe_da_manhalist){
+            if(p.getNome_do_prato().equalsIgnoreCase(excluindo_comida)){
+                System.out.println("Encontrado no -CAFE DA MANHA-");
+                Cafe_da_manhalist.remove(p);
+                System.out.println("Excluido com sucesso");
+            }
+        }
                 
-        
-            case "2":
-                for (Prato p : Cafe_da_manhalist){
-                    if(p.getNome_do_prato().equalsIgnoreCase(excluindo_comida)){
-                        System.out.println("Encontrado no -CAFE DA MANHA-");
-                        Cafe_da_manhalist.remove(p);
-                        System.out.println(p.getNome_do_prato()+" Excluido com sucesso");
-                    }else{
-                    System.out.println("NÃO FOI ENCONTRADO EM CAFE DA MANHA");
-                    }
-                }
-                break;
-            case "3":
-                for (Prato q : Almocolist){
-                    if(q.getNome_do_prato().equalsIgnoreCase(excluindo_comida)){
-                        System.out.println("Encontrado no -CAFE DA MANHA-");
-                        Almocolist.remove(q);
-                        System.out.println(q.getNome_do_prato()+" Excluido com sucesso");
-                    }else{
-                    System.out.println("NÃO FOI ENCONTRADO EM ALMOCO");
-                    }
-                }
-                break;
-            case "4":
-                for (Prato r : Sobremesalist){
-                    if(r.getNome_do_prato().equalsIgnoreCase(excluindo_comida)){
-                        System.out.println("Encontrado no -CAFE DA MANHA-");
-                        Sobremesalist.remove(r);
-                        System.out.println(r.getNome_do_prato()+" Excluido com sucesso");
-                    }else{
-                    System.out.println("NÃO FOI ENCONTRADO EM SOBREMESA");
-                    }
-                }
-        case "5":
-            for (Prato s : Lanchelist){
-                if(s.getNome_do_prato().equalsIgnoreCase(excluindo_comida)){
-                    System.out.println("Encontrado no -CAFE DA MANHA-");
-                    Lanchelist.remove(s);
-                    System.out.println(s.getNome_do_prato()+" Excluido com sucesso");
-                }else{
-                    System.out.println("NÃO FOI ENCONTRADO EM LANCHE");
-                }
-            }
-        case "6":
-            for (Prato t : Jantalist){
-                if(t.getNome_do_prato().equalsIgnoreCase(excluindo_comida)){
-                    System.out.println("Encontrado no -CAFE DA MANHA-");
-                    Jantalist.remove(t);
-                    System.out.println(t.getNome_do_prato()+" Excluido com sucesso");
-                }else{
-                    System.out.println("NÃO FOI ENCONTRADO EM JANTA");
-                }
-            }
-            break;
     }
+                
+    protected void excluindo_almoco(){    
+        System.out.println("QUAL COMIDA DESEJA EXCLUIR DO CARDAPIO?");
+        String excluindo_comida = input_da_comida.nextLine();
+        for (Prato q : Almocolist){
+                if(q.getNome_do_prato().equalsIgnoreCase(excluindo_comida)){
+                    System.out.println("Encontrado no -CAFE ALMOCO-");
+                    Almocolist.remove(q);
+                    System.out.println("Excluido com sucesso");
+                }
+        }
+                
     }
+            ////
+                
+    protected void excluindo_sobremesa(){
+        System.out.println("QUAL COMIDA DESEJA EXCLUIR DO CARDAPIO?");
+        String excluindo_comida = input_da_comida.nextLine();
+        for (Prato r : Sobremesalist){
+            if(r.getNome_do_prato().equalsIgnoreCase(excluindo_comida)){
+                System.out.println("Encontrado na -SOBRE MESA-");
+                Sobremesalist.remove(r);
+                System.out.println("Excluido com sucesso");
+            }
+        }
+    }
+            ////////////
+                
+    protected void excluindo_lanche(){
+        System.out.println("QUAL COMIDA DESEJA EXCLUIR DO CARDAPIO?");
+        String excluindo_comida = input_da_comida.nextLine();
+        for (Prato s : Lanchelist){
+            if(s.getNome_do_prato().equalsIgnoreCase(excluindo_comida)){
+            System.out.println("Encontrado no -LANCHE-");
+            Lanchelist.remove(s);
+            System.out.println("Excluido com sucesso");
+            }
+        }
+    }
+           
+            //////
+                
+    protected void excluindo_janta(){
+        System.out.println("QUAL COMIDA DESEJA EXCLUIR DO CARDAPIO?");
+        String excluindo_comida = input_da_comida.nextLine();
+        for (Prato t : Jantalist){
+        if(t.getNome_do_prato().equalsIgnoreCase(excluindo_comida)){
+            System.out.println("Encontrado na -JANTA-");
+            Jantalist.remove(t);
+            System.out.println("Excluido com sucesso");
+            }
+        }
+    }
+         
+        /////////
+            
+    protected void excluindo_bebida(){
+        System.out.println("QUAL COMIDA DESEJA EXCLUIR DO CARDAPIO?");
+        String excluindo_comida = input_da_comida.nextLine();
+        for (Bebida b : bebidalist) {
+            if(b.getNome().equalsIgnoreCase(excluindo_comida)){
+                System.out.println("Econtrado na -BEBIDA-");
+                bebidalist.remove(b);
+                System.out.println("Excluido com sucesso");
+            }
+        }
+            
+    }
+           
+        ////
+            
+    }
+    
 
 
         
@@ -279,4 +311,4 @@ public class Comida extends Empresario {
     
 
 
-}
+

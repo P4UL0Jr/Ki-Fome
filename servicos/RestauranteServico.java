@@ -1,6 +1,7 @@
+package servicos;
 import java.util.Scanner;
 
-public class Restaurante{
+public class RestauranteServico{
     Scanner input_do_restaurante = new Scanner(System.in);
 
     private String endereco;

@@ -1,6 +1,7 @@
+package servicos;
 import java.util.Scanner;
 
-public class Empresario extends Restaurante{
+public class EmpresarioServico extends RestauranteServico{
     Scanner input_do_empresario = new Scanner(System.in);
     private String nome_do_dono;
     private String email_do_dono;

@@ -1,4 +1,8 @@
+package servicos;
+
 import java.util.Scanner;
+
+import lixo.Comida;
 
 public class Menukifome {
 

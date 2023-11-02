@@ -1,4 +1,5 @@
-  public class Cliente  {
+package entidades;
+public class Cliente  {
 
     private String Nome;
     private String Cpf;

@@ -1,3 +1,4 @@
+package lixo;
 public class Pedido {
     private Comida tipos_comida;
     private String localizacao_da_entrega;

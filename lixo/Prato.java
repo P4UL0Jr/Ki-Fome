@@ -1,3 +1,4 @@
+package lixo;
 public class Prato {
     public String nome_do_prato;
     public String valor;

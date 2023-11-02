@@ -1,3 +1,4 @@
+package lixo;
 
 public class Bebida {
     private String ml;
