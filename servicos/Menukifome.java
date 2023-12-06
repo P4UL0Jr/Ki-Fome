@@ -1,8 +1,8 @@
 package servicos;
-
 import java.util.Scanner;
 
-import lixo.Comida;
+
+
 
 public class Menukifome {
 
@@ -20,14 +20,17 @@ public class Menukifome {
             forma_de_cadastro = input_do_menu.nextInt();
             switch (forma_de_cadastro){
                 case 1:
-                    System.out.println("");
+                    ClienteServico c1 = new ClienteServico();
+                    c1.cadastranco_cliente();
                     break;
                 case 2:
-                    System.out.println("");
+                    EntregadorServico novoentregador = new EntregadorServico();
+                    novoentregador.cadastro_do_entregador();
                     break;
                 case 3:
-                    Comida novorestaurante = new Comida();
+                    ComidaServico novorestaurante = new ComidaServico();
                     novorestaurante.ver_e_add_comida();
+                    break;
 
             }
 

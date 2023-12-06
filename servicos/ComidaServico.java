@@ -2,7 +2,6 @@ package servicos;
 
 import java.util.Scanner;
 
-
 public class ComidaServico extends EmpresarioServico {
     Scanner input_da_comida = new Scanner(System.in);
 
@@ -107,27 +106,9 @@ public class ComidaServico extends EmpresarioServico {
             }
         }
 
-
-
-
     }
 
-///////////////////////////////////////////////////////////////////////
-    
-
-    
- 
-
-    
-
-   
-        /////////
-            
-    
-           
-        ////
-            
-    }
+}
     
 
 

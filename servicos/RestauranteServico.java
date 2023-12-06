@@ -1,7 +1,7 @@
 package servicos;
 import java.util.Scanner;
 
-public class RestauranteServico{
+public class RestauranteServico extends CadastroServico{
     Scanner input_do_restaurante = new Scanner(System.in);
 
     private String endereco;
@@ -21,6 +21,7 @@ public class RestauranteServico{
         this.endereco = input_do_restaurante.nextLine();
         System.out.println("Digite p CNPJ do restaurante:");
         this.Cnpj = input_do_restaurante.nextLine();
+        System.out.println("Faremos o cadastro do empresario agora");
 
     }
 
